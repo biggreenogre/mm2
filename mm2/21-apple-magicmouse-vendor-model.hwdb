@@ -1,0 +1,15 @@
+usb:v05AC*
+ ID_VENDOR_FROM_DATABASE=Apple, Inc.
+
+usb:v05ACp030D*
+ ID_MODEL_FROM_DATABASE=Magic Mouse
+
+usb:v05ACp030E*
+ ID_MODEL_FROM_DATABASE=MC380Z/A [Magic Trackpad]
+
+usb:v004C*
+ ID_VENDOR_FROM_DATABASE=Apple, Inc. 2
+
+usb:v004Cp0269*
+ ID_MODEL_FROM_DATABASE=Magic Mouse 2
+

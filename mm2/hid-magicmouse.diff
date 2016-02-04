@@ -1,0 +1,31 @@
+186c186
+< 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE) {
+---
+> 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE || input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2) {
+272c272
+< 			if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE)
+---
+> 			if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE || input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2)
+350c350
+< 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE) {
+---
+> 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE || input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2) {
+369c369
+< 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE) {
+---
+> 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE || input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2) {
+419c419
+< 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE) {
+---
+> 	if (input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE || input->id.product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2) {
+524c524
+< 	}
+---
+> 		}
+526c526
+< 	if (id->product == USB_DEVICE_ID_APPLE_MAGICMOUSE)
+---
+> 	if (id->product == USB_DEVICE_ID_APPLE_MAGICMOUSE || id->product == USB_DEVICE_ID_APPLE_MAGICMOUSE_2)
+566a567,568
+> 	{ HID_BLUETOOTH_DEVICE(USB_VENDOR_ID_APPLE_INC,
+> 		USB_DEVICE_ID_APPLE_MAGICMOUSE_2), .driver_data = 0 },
