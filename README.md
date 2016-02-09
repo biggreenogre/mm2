@@ -34,12 +34,13 @@ Notes:
 
 Device aliases for original Magic Mouse and Trackpad:-
 
-Magic Trackpad:
+Magic Trackpad: 
 alias hid:b0005g*v000005ACp0000030E hid_magicmouse
-Magic Mouse:
+
+Magic Mouse: 
 alias hid:b0005g*v000005ACp0000030D hid_magicmouse
 
-Magic Mouse 2:
+Magic Mouse 2: 
 alias hid:b0005g*v0000004Cp00000269 hid_magicmouse
 
 
