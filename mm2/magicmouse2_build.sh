@@ -1,6 +1,8 @@
 #!/bin/bash
 
 BUILD_ROOT=$(pwd)
+KRNL_REL="$(uname -r)"
+KRNL_VER="$(uname -r | cut -d\- -f1)"
 
 # Extract the patch and udev files
 # tar -xzvf magicmouse2_hack.tar.gz
@@ -15,10 +17,10 @@ apt-get source linux
 cd ${BUILD_ROOT}
 
 # Backup existing hid modules
-cp -rp /lib/modules/$(uname -r)/kernel/drivers/hid/* hid.dist
+cp -rp /lib/modules/${KRNL_REL}/kernel/drivers/hid/* hid.dist
 
 # Copy source to build dir
-cp -rp dist_src/linux-3.13.0/drivers/hid .
+cp -rp dist_src/linux-${KRNL_VER}/drivers/hid .
 
 cd hid
 
@@ -28,16 +30,16 @@ patch hid-core.c < ../hid-core.diff
 patch hid-magicmouse.c < ../hid-magicmouse.diff
 
 # Compile new hid modules
-make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+make -C /lib/modules/${KRNL_REL}/build M=$(pwd) modules
 
 # Install (to /lib/modules/$(uname -r)/extra/)
-sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules_install
+sudo make -C /lib/modules/${KRNL_REL}/build M=$(pwd) modules_install
 
 cd ${BUILD_ROOT}
 
 # Remove current hid modules and replace with new
-sudo rm -rf /lib/modules/$(uname -r)/kernel/drivers/hid/*
-sudo cp -rp /lib/modules/$(uname -r)/extra/*  /lib/modules/$(uname -r)/kernel/drivers/hid/
+sudo rm -rf /lib/modules/${KRNL_REL}/kernel/drivers/hid/*
+sudo cp -rp /lib/modules/${KRNL_REL}/extra/*  /lib/modules/$(uname -r)/kernel/drivers/hid/
 
 # Install the modprobe conf file
 sudo cp magicmouse2.conf /etc/modprobe.d/
