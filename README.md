@@ -29,7 +29,7 @@ In order for the system to recognise the Apple Magic Mouse 2 as a Magic device, 
 
 After step 1, run "./magicmouse2_build.sh" to perform steps 2 through 4.
 
-Uninstall: Read the "magicmouse2_build.sh" script and reverse the steps performed. TL&DR: Restore the contents of the /lib/modules/${KERNEL_VER}/kernel/drivers/hid" dir from the backup.
+Uninstall: Read the "magicmouse2_build.sh" script and reverse the steps performed. TL&DR: Restore the contents of the /lib/modules/${KERNEL_VER}/kernel/drivers/hid" dir from the backup. Remove /etc/udev/hwdb.d/21-apple-magicmouse-vendor-model.hwdb
 
 ToDo:
 
