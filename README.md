@@ -1,12 +1,12 @@
 Add Recognition of Apple Magic Mouse 2 to **Ubuntu Trusty**
 
-* The magicmouse module produced by these tools **will _not_ provide anything that the _default Ubuntu mouse driver_ already provides**.
-* The install script is _only_ tested on **Ubuntu Trusty (14.04) LTS**. It may work on other distros with appropriate changes. 
-* **The MM2 will still function as a basic 2-button mouse!**
-... but it WILL be using the hid_magicmouse module.
+* The kernel module produced by these tools **will _not_ provide anything that the _default Ubuntu mouse driver_ already provides**.
+* **The MM2 will still only function as a basic 2-button mouse!**
+... but it WILL be using the hid_magicmouse kernel module.
+* The install script is _only_ tested on **Ubuntu Trusty (14.04) LTS**. It may work on other relases/distros with appropriate changes. YMMV
 * **The script is provided as-is with no guarantee whatsoever.**
 
-These tools are intended for use by developers familiar with kernel module development and tinkerers who wish to experiment with the Linux magicmouse kernel module on _Ubuntu Trusty_. If you are comfortable writing BASH scripts and are familiar with the process for compiling and debugging custom kernels and modules, please read on. Otherwise **STOP HERE, NOW**.
+These tools are intended for use by developers familiar with kernel module development and tinkerers who wish to experiment with the Linux hid_magicmouse kernel module on _Ubuntu Trusty_. If you are comfortable writing BASH scripts and are familiar with the process for compiling and debugging custom kernels and modules, please read on. Otherwise, **STOP HERE, STOP NOW**.
 
 
 
@@ -28,6 +28,8 @@ In order for the system to recognise the Apple Magic Mouse 2 as a Magic device, 
   4. Load (or reload) the hid_magicmouse module after the update.
 
 After step 1, run "./magicmouse2_build.sh" to perform steps 2 through 4.
+
+Uninstall: Read the "magicmouse2_build.sh" script and reverse the steps performed. TL&DR: Restore the contents of the /lib/modules/${KERNEL_VER}/kernel/drivers/hid" dir from the backup.
 
 ToDo:
 
