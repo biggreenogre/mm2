@@ -1,9 +1,14 @@
-Add Recognition of Apple Magic Mouse 2 to Ubuntu Trusty
+Add Recognition of Apple Magic Mouse 2 to **Ubuntu Trusty**
 
-*** NOTE: These tools will NOT provide full touch support. The MM2 will still function as a basic 2-button mouse! ***
+* ** The magicmouse module produced by these tools will _not_ provide anything more than the _default Ubuntu mouse driver_ already provides. **
+* The install script is _only_ tested on **Ubuntu Trusty (14.04) LTS**. It may work on other distros with appropriate changes. 
+*** The MM2 will still function as a basic 2-button mouse! **
 ... but it WILL be using the hid_magicmouse module.
+* ** The script is provided as-is with no guarantee whatsoever. **
 
-This works and is tested on Ubuntu Trusty (14.04) LTS but should work on most Debian-based distros and others with changes to the method of installing the kernel soyurce.
+These tools are intended for use by developers familiar with kernel module development and tinkerers who wish to experiment with the Linux magicmouse kernel module on _Ubuntu Trusty_. If you are comfortable writing BASH scripts and are familiar with the process for compiling and debugging custom kernels and modules, please read on. Otherwise ** STOP HERE, NOW. **
+
+
 
 Files:
   21-apple-magicmouse-vendor-model.hwdb  -  The hardware db for udev with new vendor and device ids
